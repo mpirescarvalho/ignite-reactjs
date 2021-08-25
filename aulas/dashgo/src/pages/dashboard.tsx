@@ -1,6 +1,5 @@
 import { Box, Flex, SimpleGrid, Text, theme } from '@chakra-ui/react';
 import dynamic from 'next/dynamic';
-import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from 'node:constants';
 import { Header } from '../components/Header';
 import { Sidebar } from '../components/Sidebar';
 
