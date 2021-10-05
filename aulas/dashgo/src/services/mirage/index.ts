@@ -13,23 +13,23 @@ export function makeServer() {
 			user: Model.extend<Partial<User>>({}),
 		},
 
-    factories: {
-      user: Factory.extend({
-        name(i: number) {
-          return `User ${i + 1}`;
-        },
-        email() {
-          return faker.internet.email().toLowerCase();
-        },
-        createdAt() {
-          return faker.date.recent(10);
-        },
-      })
-    },
+		factories: {
+			user: Factory.extend({
+				name(i: number) {
+					return `User ${i + 1}`;
+				},
+				email() {
+					return faker.internet.email().toLowerCase();
+				},
+				createdAt() {
+					return faker.date.recent(10);
+				},
+			}),
+		},
 
-    seeds(server) {
-      server.createList('user', 200);
-    },
+		seeds(server) {
+			server.createList('user', 10);
+		},
 
 		routes() {
 			this.namespace = 'api';
